@@ -5,13 +5,13 @@ class Anagram
   end
   
   def match(array)
-    match = []
+    return = []
       array.each do |word|
         if @word.length == word.length && word.split("").all? {|letter| @word.include?(letter)}
-              match << word
+              return << word
         end
       end
-    match
+    return
   end
   
 end
