@@ -7,9 +7,11 @@ class Anagram
   def match(array)
     anagram = []
       array.each do |element|
-        if element.split("").all? {|letter| @word.include?(element)} && element.length == @word.length
+        if element.length == @word.length
+          if element.split("").all? {|letter| @word.include?(element)}
               anagram << element
               p anagram
+          end        
         end
       end
     anagram
