@@ -8,7 +8,7 @@ class Anagram
     match = []
       array.each do |word|
         if @word.length == word.length
-          word.split("").each do |letter|
+          word.split("").all? do |letter|
           if @word.include?(letter)
         end
       end
