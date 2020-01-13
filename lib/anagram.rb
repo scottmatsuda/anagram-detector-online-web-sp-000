@@ -8,7 +8,7 @@ class Anagram
     anagram = []
       array.each do |element|
         if element.length == @word.length
-          if element.split("").all? {|letter| @word.include?(element)}
+          if element.split("").all? {|letter| @word.to_s.include?(element)}
               anagram << element
               p anagram
           end        
