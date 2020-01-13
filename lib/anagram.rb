@@ -8,10 +8,10 @@ class Anagram
     anagram = []
       array.each do |element|
         p element.length
+        p @word.length
         if element.length == @word.length
           if element.split("").all? {|letter| @word.include?(element)}
               anagram << element
-              p anagram
           end        
         end
       end
