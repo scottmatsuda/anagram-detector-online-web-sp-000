@@ -9,7 +9,9 @@ class Anagram
       array.each do |element|
         if element.length == @word.length
           if element.split("").all? {|letter| @word.include?(letter)}
-              anagram << element
+            if @word.split("").all? {|letter| element.include?(letter)}
+                anagram << element
+            end
           end        
         end
       end
