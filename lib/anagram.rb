@@ -9,6 +9,7 @@ class Anagram
       array.each do |word|
         if word.split("").all? {|letter| @word.include?(letter)}
               anagram << word
+              p anagram
         end
       end
     anagram
