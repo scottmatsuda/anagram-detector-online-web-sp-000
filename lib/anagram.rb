@@ -6,10 +6,9 @@ class Anagram
   
   def match(array)
     anagram = []
-      array.each do |word|
-        if word.split("").all? {|letter| @word.include?(letter)}
-              anagram << word
-              p anagram
+      array.each do |mixed|
+        if mixed.split("").all? {|letter| @word.include?(letter)}
+              anagram << mixed
         end
       end
     anagram
